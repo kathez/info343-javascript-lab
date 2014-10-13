@@ -7,9 +7,14 @@
 	and alerts the user what the sum is.
 */ 
 
+
 function addition() {
-	// your code goes here!
+	var input1 = parseInt(document.getElementById('additionInput1').value);
+	var input2 = parseInt(document.getElementById('additionInput2').value);
+	var sum = input1 + input2;
+	alert(sum);
 }
+
 
 /* --------------------------------------------------------- */
 
@@ -28,7 +33,25 @@ function addition() {
 */ 
 
 function vowelCounter() {
-	// your code goes here!
+	var sentence = document.getElementById('vowelInput').value;
+	var s = sentence.toLowerCase().split("");
+	var idx = 0;
+	var count = 0;
+	for (idx = 0; idx < s.length; ++idx) {
+		if (s[idx] == 'a' || s[idx] == 'e'
+			|| s[idx] == 'i' || s[idx] == 'o'
+			|| s[idx] == 'u') {
+			count++;
+
+		}
+	}
+
+	if (count > 1) {
+		document.getElementById('vowelInput').value = 'That sentence has ' + count + ' vowels in it.';
+	} else {
+		document.getElementById('vowelInput').value = 'That sentence has ' + count + ' voewl in it.';
+	}
+	
 }
 
 /* --------------------------------------------------------- */
